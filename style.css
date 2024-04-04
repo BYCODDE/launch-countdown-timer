@@ -126,3 +126,50 @@ div h3 {
 .main_footer svg {
   margin-top: 80px;
 }
+@media only screen and (max-width: 768px) {
+  h1 {
+    width: 327px;
+    font-size: 18px;
+  }
+  .DAYS,
+  .HOURS,
+  .MINUTES,
+  .SECONDS {
+    width: 70px;
+    height: 71px;
+  }
+
+  .DAYS h2,
+  .HOURS h2,
+  .MINUTES h2,
+  .SECONDS h2 {
+    font-size: 36px;
+  }
+  .DAYS h3,
+  .HOURS h3,
+  .MINUTES h3,
+  .SECONDS h3 {
+    font-size: 7px;
+  }
+  hr {
+    width: 70px;
+    height: 0.473px;
+  }
+  div h3 {
+    margin-top: 100px;
+  }
+  .main_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main_footer svg {
+    margin-top: 150px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 430px) {
+  .main_footer svg {
+    margin-top: 10px;
+  }
+}
