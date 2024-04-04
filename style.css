@@ -124,8 +124,16 @@ div h3 {
   gap: 48px;
 }
 .main_footer svg {
+  cursor: pointer;
   margin-top: 80px;
+  z-index: 1;
 }
+.main_footer svg path:hover {
+  fill: #fb5e84;
+}
+
+/* FIXME: svg hoveri ar mushaobs ! */
+
 @media only screen and (max-width: 768px) {
   h1 {
     width: 327px;
