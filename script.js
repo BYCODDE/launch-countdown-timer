@@ -4,56 +4,24 @@ const minutesH2 = document.getElementById("MINUTES");
 const secondsH2 = document.getElementById("SECONDS");
 console.log(daysH2, hoursH2, minutesH2, secondsH2);
 
-// const hours = days / 24;
-// const minutes = hours / 60;
-// const seconds = minutes / 60;
-// const updateSeconds = function () {
-//   let seconds = 59;
-//   setInterval(() => {
-//     secondsH2.textContent = seconds;
-//     if (seconds === 0) {
-//       seconds = 59;
-//     } else {
-//       seconds--;
-//       return seconds;
-//     }
-//   }, 1000);
-// };
+let countDownDate = new Date(`Apr 19 , 2024 23:59:59`).getTime();
 
-// // const handleSecondsUpdate = function (seconds) {
-// //   return seconds; // Log the updated value of seconds
-// // };
+let x = setInterval(function () {
+  let now = new Date().getTime();
 
-// console.log(updateSeconds());
+  let distance = countDownDate - now;
 
-const updateSeconds = function (handleSeconds) {
-  let seconds = 59;
-  setInterval(() => {
-    secondsH2.textContent = seconds;
-    if (seconds === 0) {
-      seconds = 59;
-    } else {
-      seconds--;
-      handleSeconds(seconds);
-    }
-  }, 1000);
-};
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-const handleSeconds = function (seconds) {
-  console.log(seconds);
-  return seconds;
-};
+  daysH2.textContent = days;
+  hoursH2.textContent = hours;
+  minutesH2.textContent = minutes;
+  secondsH2.textContent = seconds;
 
-updateSeconds(handleSeconds);
-
-// const updateMinutes = function () {
-//   let main_seconds = updateSeconds();
-//   console.log(main_seconds);
-//   let minutes = 59;
-//   setInterval(() => {
-//     minutesH2.textContent = minutes;
-//     // if (main_seconds.seconds) {
-//     // }
-//   }, 1000);
-// };
-// updateMinutes();
+  if (distance < 0) {
+    countDownDate += 14 * 60 * 60 * 24 * 1000;
+  }
+}, 1000);
