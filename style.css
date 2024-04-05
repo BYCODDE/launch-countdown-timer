@@ -98,13 +98,13 @@ hr {
   border-color: #000;
 }
 
-.DAYS_styles {
+.main_div {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.DAYS_styles svg {
+.main_div svg {
   /* transform: rotate(180deg); */
 }
 div h3 {
