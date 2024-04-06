@@ -92,7 +92,7 @@ h1 {
 }
 
 hr {
-  width: 148px;
+  width: 135px;
   height: 1px;
   opacity: 0.253;
   border-color: #000;
@@ -128,6 +128,10 @@ div h3 {
 }
 .main_footer svg path:hover {
   fill: #fb5e84;
+}
+
+#first_svg{
+margin-right: 1px;
 }
 
 /* FIXME: svg hoveri ar mushaobs ! */
