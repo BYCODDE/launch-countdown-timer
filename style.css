@@ -104,9 +104,7 @@ hr {
   justify-content: center;
   align-items: center;
 }
-.main_div svg {
-  /* transform: rotate(180deg); */
-}
+
 div h3 {
   position: absolute;
   margin-top: 200px;

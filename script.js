@@ -2,7 +2,6 @@ const daysH2 = document.getElementById("DAYS");
 const hoursH2 = document.getElementById("HOURS");
 const minutesH2 = document.getElementById("MINUTES");
 const secondsH2 = document.getElementById("SECONDS");
-console.log(daysH2, hoursH2, minutesH2, secondsH2);
 
 let countDownDate = new Date(`Apr 19 , 2024 23:59:59`).getTime();
 
